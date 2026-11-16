@@ -1,6 +1,38 @@
 (() => {
   "use strict";
 
+  // Scroll suave e lento para links internos (#ancora), duração maior que o padrão do navegador
+  function smoothScrollTo(targetY, duration) {
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+    const start = performance.now();
+    function easeInOutQuad(t) {
+      return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+    }
+    function step(now) {
+      const elapsed = Math.min((now - start) / duration, 1);
+      window.scrollTo(0, startY + diff * easeInOutQuad(elapsed));
+      if (elapsed < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (event) => {
+      const id = link.getAttribute("href").slice(1);
+      const target = document.getElementById(id);
+      if (!target) return;
+      event.preventDefault();
+      const top = target.getBoundingClientRect().top + window.scrollY - 80;
+      if (prefersReducedMotion) {
+        window.scrollTo(0, top);
+      } else {
+        smoothScrollTo(top, 1400);
+      }
+    });
+  });
+
   // Menu mobile
   const menuBtn = document.getElementById("menuBtn");
   const navbar = document.getElementById("navbar");
