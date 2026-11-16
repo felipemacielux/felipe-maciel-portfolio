@@ -116,13 +116,6 @@
     deskObserver.observe(deskContainer);
   }
 
-  // CTA principal -> abre o cliente de e-mail com assunto pronto
-  const ctaPrimary = document.getElementById("ctaPrimary");
-  if (ctaPrimary) {
-    const subject = encodeURIComponent("Orçamento para sistema");
-    ctaPrimary.href = `mailto:${window.SITE_CONFIG.email}?subject=${subject}`;
-  }
-
   // Formulário de contato -> envia via API serverless (/api/contact)
   const form = document.getElementById("contactForm");
   const formStatus = document.getElementById("formStatus");
