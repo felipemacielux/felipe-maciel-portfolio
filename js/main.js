@@ -21,7 +21,6 @@
     requestAnimationFrame(step);
   }
 
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (event) => {
       const id = link.getAttribute("href").slice(1);
@@ -29,11 +28,7 @@
       if (!target) return;
       event.preventDefault();
       const top = target.getBoundingClientRect().top + window.scrollY - 80;
-      if (prefersReducedMotion) {
-        window.scrollTo(0, top);
-      } else {
-        smoothScrollTo(top, 2800);
-      }
+      smoothScrollTo(top, 2800);
     });
   });
 
