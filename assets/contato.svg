@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" role="img" aria-labelledby="contactTitle">
+  <title id="contactTitle">Ilustração de contato: notebook com balão de mensagem</title>
+  <defs>
+    <linearGradient id="g1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="50%" stop-color="#a855f7" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+  </defs>
+  <rect x="60" y="150" width="280" height="170" rx="16" fill="#1f2937" stroke="url(#g1)" stroke-width="3" />
+  <rect x="80" y="170" width="240" height="130" rx="8" fill="#111827" />
+  <rect x="40" y="320" width="320" height="18" rx="9" fill="#27272a" />
+  <circle cx="200" cy="235" r="45" fill="none" stroke="url(#g1)" stroke-width="4" opacity="0.5" />
+  <path d="M250 60 h100 a16 16 0 0 1 16 16 v70 a16 16 0 0 1 -16 16 h-60 l-24 24 v-24 h-16 a16 16 0 0 1 -16 -16 v-70 a16 16 0 0 1 16 -16 z" fill="url(#g1)" />
+  <circle cx="285" cy="110" r="6" fill="#111827" />
+  <circle cx="310" cy="110" r="6" fill="#111827" />
+  <circle cx="335" cy="110" r="6" fill="#111827" />
+  <rect x="160" y="195" width="80" height="10" rx="5" fill="#374151" />
+  <rect x="160" y="215" width="120" height="10" rx="5" fill="#374151" />
+  <rect x="160" y="235" width="60" height="10" rx="5" fill="#374151" />
+</svg>

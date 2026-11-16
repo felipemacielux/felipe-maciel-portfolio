@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Felipe Maciel — Sistemas de gestão para pequenos negócios | LeafCore</title>
+  <meta name="description" content="Desenvolvo sistemas de gestão (PDV + ERP) e automações para pequenos negócios: no ar, seguros e atualizados sem parar a sua loja. Fale comigo por e-mail." />
+  <meta property="og:title" content="Felipe Maciel — Sistemas de gestão para pequenos negócios" />
+  <meta property="og:description" content="Engenheiro de Software e especialista em infraestrutura. Ponte entre infraestrutura robusta e desenvolvimento ágil, com foco em automação e IA." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/foto.jpeg" />
+  <link rel="icon" href="assets/foto.jpeg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/tailwind.css" />
+  <link rel="stylesheet" href="css/custom.css" />
+</head>
+<body class="antialiased overflow-x-hidden">
+  <main class="flex min-h-screen flex-col bg-[#121212]">
+    <div class="container mx-auto mt-4 px-6 md:px-12 py-4">
+
+      <nav class="fixed top-0 left-0 right-0 z-10 bg-[#121212]">
+        <div class="flex flex-wrap items-center justify-between mx-auto p-4">
+          <a href="#top" class="text-white text-3xl font-semibold flex items-center gap-3">
+            <img src="assets/foto.jpeg" alt="Felipe Maciel" width="44" height="44" class="rounded-full object-cover size-11" />
+            <span class="hidden sm:inline text-lg">Felipe Maciel</span>
+          </a>
+          <button id="menuBtn" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="navbar" class="mobile-menu block md:hidden text-white p-2">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="size-7" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5" />
+            </svg>
+          </button>
+          <div class="menu hidden md:block md:w-auto" id="navbar">
+            <ul class="flex p-4 md:p-0 md:flex-row md:space-x-8 mt-0">
+              <li><a href="#about" class="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white">Sobre</a></li>
+              <li><a href="#experience" class="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white">Experiência</a></li>
+              <li><a href="#contact" class="block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0 hover:text-white">Contato</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <section id="top" class="min-h-[95vh] flex flex-col justify-evenly">
+        <div class="grid grid-cols-1 lg:grid-cols-12 my-4 h-[100%]">
+          <div class="col-span-4 place-self-center mt-4 lg:mt-0 lg:order-1">
+            <div class="rounded-full bg-transparent relative w-[200px] h-[200px] lg:w-[350px] lg:h-[350px] overflow-hidden mb-6">
+              <div class="bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 w-[150px] h-[150px] lg:w-[250px] lg:h-[250px] absolute transform -translate-x-1/2 translate-y-1/3 left-1/2 rounded-full blur-[20px]"></div>
+              <img src="assets/foto.jpeg" alt="Foto de Felipe Maciel" width="300" height="315" class="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 object-cover rounded-full size-[250px] md:size-[300px]" />
+            </div>
+          </div>
+          <div class="col-span-8 place-self-center place-items-start gap-4">
+            <h1 class="mb-2 lg:mb-4 font-extrabold">
+              <span class="text-transparent text-3xl md:text-4xl lg:text-5xl xl:text-7xl bg-clip-text bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500">Olá, tudo bem? <span class="text-white"></span> Eu sou </span><br />
+              <span class="text-3xl md:text-4xl lg:text-3xl xl:text-7xl text-white">Felipe, </span>
+              <span id="typewriter" class="text-3xl md:text-4xl lg:text-5xl xl:text-7xl text-white" data-words='["Dev Fullstack","Devops","Automação + IA"]'></span>
+            </h1>
+            <p class="text-[#ADB7BE] text-sm lg:text-xl mb-6">
+              Ajudo pequenos e médios negócios a vender e gerenciar com sistemas no ar, seguros e sempre atualizados, sem parar a sua loja. Vamos conversar sobre o seu projeto?
+            </p>
+            <div class="flex">
+              <a id="ctaPrimary" href="#" aria-label="Falar por e-mail" class="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white px-6 py-3 rounded-full mr-4">
+                <span class="flex align-middle gap-2">Falar por E-mail
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" class="size-5">
+                    <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+                    <path d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+                  </svg>
+                </span>
+              </a>
+              <div class="flex gap-2">
+                <a href="https://www.linkedin.com/in/felipe-maciel-839915196/" target="_blank" rel="noopener" aria-label="LinkedIn" class="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1 rounded-full">
+                  <span class="block bg-[#0565ff] hover:bg-[#1250b5] rounded-full h-9 w-9 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" width="22" height="22" aria-hidden="true">
+                      <path fill="transparent" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5V37z"></path>
+                      <path fill="#FFF" d="M12 19H17V36H12zM14.485 17h-.028C12.965 17 12 15.888 12 14.499 12 13.08 12.995 12 14.514 12c1.521 0 2.458 1.08 2.486 2.499C17 15.887 16.035 17 14.485 17zM36 36h-5v-9.099c0-2.198-1.225-3.698-3.192-3.698-1.501 0-2.313 1.012-2.707 1.99C24.957 25.543 25 26.511 25 27v9h-5V19h5v2.616C25.721 20.5 26.85 19 29.738 19c3.578 0 6.261 2.25 6.261 7.274L36 36 36 36z"></path>
+                    </svg>
+                  </span>
+                </a>
+                <a href="https://github.com/felipemacielux" target="_blank" rel="noopener" aria-label="GitHub" class="bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 px-1 py-1 rounded-full">
+                  <span class="block bg-white hover:bg-slate-400 rounded-full h-9 w-9 flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                      <path d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.37 7.86 10.9.57-.1 1.17-.3 1.17-.3v-2.5s-.65.2-1.4.2c-1.37 0-2.3-.76-2.6-1.46-.18-.42-.47-.79-.84-1.06-.3-.27-.3-.27-.01-.27.63 0 1.07.58 1.29.92.6.9 1.2 1.1 1.5 1.1.4 0 .76-.06 1-.16.12-.72.47-1.36.95-1.82-2.33-.42-3.95-1.7-3.95-3.95 0-1.08.4-2.02 1.07-2.78-.1-.26-.46-1.29.1-2.68 0 0 .88-.28 2.88 1.07.84-.23 1.73-.35 2.62-.35.9 0 1.78.12 2.62.35 2-1.35 2.88-1.07 2.88-1.07.56 1.39.2 2.42.1 2.68.67.76 1.07 1.7 1.07 2.78 0 2.26-1.63 3.53-3.96 3.95.63.6.98 1.5.98 2.5v3.1s.6.2 1.17.3C20.21 21.37 23.5 17.08 23.5 12 23.5 5.73 18.27.5 12 .5z" />
+                    </svg>
+                  </span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div class="container mx-auto px-4 py-8 rounded-md shadow-sm shadow-gray-700 text-white">
+        <div class="flex flex-wrap gap-6 max-w-[80vw] mx-auto">
+          <div class="flex-1 flex gap-4 items-center justify-center">
+            <div class="text-3xl lg:text-5xl font-extrabold"><span data-count="6">0</span>+</div>
+            <div class="text-sm">Anos em TI</div>
+          </div>
+          <div class="flex-1 flex gap-4 items-center justify-center">
+            <div class="text-3xl lg:text-5xl font-extrabold"><span data-count="70">0</span>%</div>
+            <div class="text-sm">Menos chamados de suporte<br />(projeto Kiosk)</div>
+          </div>
+          <div class="flex-1 flex gap-4 items-center justify-center">
+            <div class="text-3xl lg:text-5xl font-extrabold"><span data-count="40">0</span>%</div>
+            <div class="text-sm">Menos tempo de resposta<br />a incidentes</div>
+          </div>
+          <div class="flex-1 flex gap-4 items-center justify-center">
+            <div class="text-3xl lg:text-5xl font-extrabold"><span data-count="10">0</span>+</div>
+            <div class="text-sm">Cursos e certificações</div>
+          </div>
+        </div>
+      </div>
+
+      <section id="about" class="text-white scroll-mt-[80px] min-h-[60vh]">
+        <div>
+          <h2 class="relative text-3xl font-bold my-6 text-center">
+            <span class="text-transparent md:text-4xl lg:text-5xl xl:text-7xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Sobre mim</span>
+          </h2>
+        </div>
+        <div data-reveal="up" class="flex flex-col-reverse justify-center gap-6 lg:flex-row">
+          <div class="h-[30vh] lg:h-auto lg:w-[40%]">
+            <div id="desk3d" aria-hidden="true"></div>
+          </div>
+          <div class="lg:w-[60%] md:text-[1.35rem] text-justify">
+            <div>
+              Sou engenheiro de software e especialista em infraestrutura de TI, com foco em
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">automação</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">DevOps</span> e soluções com
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">IA</span>.
+              Faço a ponte entre infraestrutura robusta e desenvolvimento ágil, projetando sistemas escaláveis, resilientes e fáceis de acompanhar — do zero até a produção.
+            </div>
+            <div class="mt-4">
+              Trabalho com
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">Python</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">FastAPI</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">React</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">PostgreSQL</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">Docker</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">CI/CD</span>,
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">AWS</span> e
+              <span class="text-transparent font-extrabold md:text-2xl bg-clip-text bg-gradient-to-r from-red-500 to-yellow-500">Grafana</span>
+              para manter sistemas no ar, seguros e observáveis.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="experience" class="scroll-mt-[80px]">
+        <div>
+          <h2 class="relative text-3xl font-bold my-6 text-center">
+            <span class="text-transparent md:text-4xl lg:text-5xl xl:text-7xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Experiência</span>
+          </h2>
+        </div>
+        <ol class="relative border-s border-gray-700 mx-auto w-auto md:w-3/4 lg:w-2/3">
+
+          <li data-reveal="up" class="relative mb-10 ml-4 md:ml-12 px-6 py-3 border-slate-200 border-b-4 bg-gradient-to-b from-slate-900 rounded-md">
+            <span class="absolute -left-4 md:-left-8 flex items-center justify-center size-[30px] md:size-[60px] rounded-full ring-4 md:ring-8 ring-gray-900 bg-blue-900 overflow-hidden">
+              <img src="assets/leafcore-logo.jpeg" alt="Logo LeafCore" width="100" height="100" class="object-contain" />
+            </span>
+            <h3 class="flex items-center mb-1 text-lg md:text-xl font-semibold text-white">Fullstack &amp; DevOps Engineer <span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-green-900 text-green-300 ms-3">Atual</span></h3>
+            <span class="block mb-2 text-sm md:text-md font-normal leading-none text-gray-300">LeafCore · Remoto</span>
+            <time class="block mb-2 text-xs md:text-sm font-light leading-none text-blue-500">Abril de 2026 – atual</time>
+            <ul class="mb-4 text-xs md:text-base font-normal text-gray-400 list-disc">
+              <li class="mb-2 ml-4">Construí, do zero à produção, sistemas de gestão comercial (PDV + ERP) para pequenas empresas.</li>
+              <li class="mb-2 ml-4">Backend em Python/FastAPI com SQLAlchemy assíncrono, PostgreSQL e Redis.</li>
+              <li class="mb-2 ml-4">Frontend em Electron + React + TypeScript (PDV) e React Web (ERP).</li>
+              <li class="mb-2 ml-4">Sistema no ar, atualizado sem parar a loja: Docker, Nginx e CI/CD (GitHub Actions) em VPS.</li>
+              <li class="mb-2 ml-4">Arquitetura orientada a especificação (OpenAPI), com autenticação JWT + chave de API.</li>
+              <li class="mb-2 ml-4">Transações ACID garantindo a integridade de pedidos e estoque.</li>
+            </ul>
+          </li>
+
+          <li data-reveal="up" class="relative mb-10 ml-4 md:ml-12 px-6 py-3 border-slate-200 border-b-4 bg-gradient-to-b from-slate-900 rounded-md">
+            <span class="absolute -left-4 md:-left-8 flex items-center justify-center size-[30px] md:size-[60px] rounded-full ring-4 md:ring-8 ring-gray-900 bg-blue-900 overflow-hidden">
+              <img src="assets/loja-logo.jpeg" alt="Logo Loja do Mecânico" width="100" height="100" class="object-contain" />
+            </span>
+            <h3 class="flex items-center mb-1 text-lg md:text-xl font-semibold text-white">Analista de TI Jr <span class="text-sm font-medium me-2 px-2.5 py-0.5 rounded bg-green-900 text-green-300 ms-3">Atual</span></h3>
+            <span class="block mb-2 text-sm md:text-md font-normal leading-none text-gray-300">Loja do Mecânico</span>
+            <time class="block mb-2 text-xs md:text-sm font-light leading-none text-blue-500">Maio de 2023 – atual (antes, Atendimento ao Cliente: out/2021 – mai/2023)</time>
+            <ul class="mb-4 text-xs md:text-base font-normal text-gray-400 list-disc">
+              <li class="mb-2 ml-4">Scripts de automação (Shell/Python) eliminando gargalos manuais do dia a dia.</li>
+              <li class="mb-2 ml-4">Painéis no Grafana com alertas proativos: ~40% menos tempo médio de resposta a incidentes.</li>
+              <li class="mb-2 ml-4">Automação de atualizações de hardware (Dell CCTK) sem impactar o usuário.</li>
+              <li class="mb-2 ml-4">IAM centralizado via Active Directory, com políticas de segurança e controle de acesso.</li>
+              <li class="mb-2 ml-4">Padronização de procedimentos e relatórios operacionais.</li>
+            </ul>
+          </li>
+
+          <li data-reveal="up" class="relative mb-10 ml-4 md:ml-12 px-6 py-3 border-slate-200 border-b-4 bg-gradient-to-b from-slate-900 rounded-md">
+            <span class="absolute -left-4 md:-left-8 flex items-center justify-center size-[30px] md:size-[60px] rounded-full ring-4 md:ring-8 ring-gray-900 bg-blue-900 overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.5" width="28" height="28" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l-4.5 4.5 4.5 4.5m10.5-9l4.5 4.5-4.5 4.5M14.25 3.75l-4.5 16.5" />
+              </svg>
+            </span>
+            <h3 class="flex items-center mb-1 text-lg md:text-xl font-semibold text-white">Projetos</h3>
+            <span class="block mb-2 text-sm md:text-md font-normal leading-none text-gray-300">Automação, hardware e IA</span>
+            <ul class="mb-4 text-xs md:text-base font-normal text-gray-400 list-disc">
+              <li class="mb-2 ml-4"><strong class="text-gray-200">From Boot to Kiosk</strong> (Debian + Shell Script, mai–jun/2025): ~70% menos chamados de suporte para reiniciar painéis de atendimento.</li>
+              <li class="mb-2 ml-4"><strong class="text-gray-200">Eficiência energética e automação de hardware</strong> (Dell CCTK, mai–jun/2025): menor custo operacional, com atualizações críticas nas janelas agendadas.</li>
+              <li class="mb-2 ml-4"><strong class="text-gray-200">Agente CLI de suporte técnico com IA</strong> (RAG, em andamento): consulta documentação PDF complexa; telemetria de latência, tokens e precisão no Grafana. Stack: Python, RAG, AWS EC2, Grafana.</li>
+            </ul>
+          </li>
+
+          <li data-reveal="up" class="relative mb-10 ml-4 md:ml-12 px-6 py-3 border-slate-200 border-b-4 bg-gradient-to-b from-slate-900 rounded-md">
+            <span class="absolute -left-4 md:-left-8 flex items-center justify-center size-[30px] md:size-[60px] rounded-full ring-4 md:ring-8 ring-gray-900 bg-blue-900 overflow-hidden">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="1.5" width="28" height="28" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443" />
+              </svg>
+            </span>
+            <h3 class="flex items-center mb-1 text-lg md:text-xl font-semibold text-white">Análise e Desenvolvimento de Sistemas</h3>
+            <span class="block mb-2 text-sm md:text-md font-normal leading-none text-gray-300">Fatec Franca</span>
+            <time class="block mb-2 text-xs md:text-sm font-light leading-none text-blue-500">Agosto de 2020 – Julho de 2023</time>
+          </li>
+
+        </ol>
+      </section>
+
+      <section id="contact" class="text-white scroll-mt-[80px] min-h-[60vh]">
+        <div>
+          <h2 class="relative text-3xl font-bold my-6 text-center">
+            <span class="text-transparent md:text-4xl lg:text-5xl xl:text-7xl bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500">Vamos conversar?</span>
+          </h2>
+        </div>
+        <div class="mt-6">
+          <div class="grid sm:grid-cols-2 items-start gap-12 p-8 mx-auto max-w-5xl bg-gradient-to-b from-slate-900 rounded-md">
+            <form id="contactForm" class="ml-auto space-y-4 w-full">
+              <input type="text" placeholder="Nome" required class="w-full bg-slate-800 placeholder-slate-300 text-white rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" name="name" />
+              <input type="email" placeholder="E-mail" required class="w-full bg-slate-800 placeholder-slate-300 text-white rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" name="email" />
+              <input type="text" placeholder="Assunto" required class="w-full bg-slate-800 placeholder-slate-300 text-white rounded-md py-2.5 px-4 border text-sm outline-none focus:border-blue-500" name="subject" />
+              <textarea name="message" placeholder="Conte um pouco sobre o seu negócio e o que você precisa" rows="6" required class="w-full bg-slate-800 placeholder-slate-300 text-white rounded-md px-4 py-2.5 border text-sm outline-none focus:border-blue-500"></textarea>
+              <button type="submit" class="rounded-md text-sm px-4 py-2.5 w-full !mt-6 bg-gradient-to-br from-blue-500 via-purple-500 to-pink-500 hover:bg-slate-200 text-white mr-4">Enviar mensagem</button>
+              <p id="formStatus" class="text-sm text-[#ADB7BE] text-center !mt-3" role="status" aria-live="polite"></p>
+            </form>
+            <div class="relative h-full min-h-[220px]">
+              <img src="assets/contato.svg" alt="" aria-hidden="true" class="absolute inset-0 h-full w-full object-contain" />
+            </div>
+          </div>
+          <p class="text-center text-[#ADB7BE] text-sm mt-6">
+             <a href="mailto:felipemacielfolhaverde@gmail.com" class="text-white underline">felipemacielfolhaverde@gmail.com</a>
+          </p>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

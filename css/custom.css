@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "JetBrains Mono";
+  src: local("JetBrains Mono");
+}
+
+body {
+  font-family: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+}
+
+/* Menu mobile */
+#navbar.is-open {
+  display: block !important;
+}
+@media (max-width: 767px) {
+  #navbar {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #121212;
+    border-top: 1px solid #27272a;
+  }
+}
+
+/* Typewriter */
+#typewriter::after {
+  content: "";
+  display: inline-block;
+  width: 2px;
+  height: 1em;
+  margin-left: 2px;
+  background: currentColor;
+  vertical-align: -0.1em;
+  animation: caret-blink 0.9s steps(1) infinite;
+}
+@keyframes caret-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* Reveal ao rolar */
+[data-reveal] {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+[data-reveal].reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Cena 3D: placeholder em gradiente até carregar */
+#desk3d {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 220px;
+  cursor: grab;
+  background: linear-gradient(135deg, rgba(59,130,246,0.12), rgba(168,85,247,0.12), rgba(236,72,153,0.12));
+  border-radius: 0.75rem;
+}
+#desk3d canvas {
+  border-radius: 0.75rem;
+}
+#desk3d.desk3d-fallback::after {
+  content: "Bancada 3D indisponível neste navegador";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  text-align: center;
+  color: #ADB7BE;
+  font-size: 0.85rem;
+}
+
+/* Timeline (Experiência): badge/ícone — tamanhos fixos e offset responsivo
+   não compilados no tailwind.css (classes nunca usadas em outro lugar) */
+#experience li > span:first-child {
+  width: 30px;
+  height: 30px;
+  left: -1rem;
+}
+@media (min-width: 768px) {
+  #experience li > span:first-child {
+    width: 60px;
+    height: 60px;
+    left: -2rem;
+  }
+  /* px-6 (24px) não cobre o círculo (28px) + sangria do ring-8 (8px) */
+  #experience li {
+    padding-left: 2.5rem;
+  }
+}
+
+/* Reduz movimento para quem pede */
+@media (prefers-reduced-motion: reduce) {
+  #typewriter::after {
+    animation: none;
+  }
+}
