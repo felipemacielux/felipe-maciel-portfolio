@@ -163,6 +163,9 @@
       const email = form.email.value.trim();
       const subject = form.subject.value.trim();
       const message = form.message.value.trim();
+      const company = form.company.value.trim();
+
+      if (company) return; // honeypot: bot filled hidden field, silently drop
 
       if (submitBtn) submitBtn.disabled = true;
       if (formStatus) formStatus.textContent = "Enviando...";
@@ -171,7 +174,7 @@
         const response = await fetch("/api/contact", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ name, email, subject, message }),
+          body: JSON.stringify({ name, email, subject, message, company }),
         });
         const data = await response.json().catch(() => ({}));
 
