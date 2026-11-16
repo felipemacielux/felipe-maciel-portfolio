@@ -141,11 +141,16 @@
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           deskObserver.disconnect();
-          import("./desk3d.bundle.js")
-            .then((mod) => mod.initDesk3d(deskContainer))
-            .catch(() => {
-              deskContainer.classList.add("desk3d-fallback");
-            });
+          // requestIdleCallback adia a inicialização pesada do three.js para quando a thread
+          // principal estiver livre, evitando travar animações de scroll em andamento.
+          const schedule = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
+          schedule(() => {
+            import("./desk3d.bundle.js")
+              .then((mod) => mod.initDesk3d(deskContainer))
+              .catch(() => {
+                deskContainer.classList.add("desk3d-fallback");
+              });
+          });
         }
       });
     }, { threshold: 0.2 });
