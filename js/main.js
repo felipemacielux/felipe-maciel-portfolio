@@ -1,18 +1,22 @@
 (() => {
   "use strict";
 
-  // Scroll suave e lento para links internos (#ancora), duração maior que o padrão do navegador
+  // Scroll suave e lento para links internos (#ancora), duração maior que o padrão do navegador.
+  // Anima por contagem de frames (não por tempo decorrido): se o navegador atrasar um frame,
+  // o próximo continua de onde parou em vez de pular direto para o final.
   function smoothScrollTo(targetY, duration) {
     const startY = window.scrollY;
     const diff = targetY - startY;
-    const start = performance.now();
+    const totalFrames = Math.max(1, Math.round((duration / 1000) * 60));
+    let frame = 0;
     function easeInOutQuad(t) {
       return t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
     }
-    function step(now) {
-      const elapsed = Math.min((now - start) / duration, 1);
-      window.scrollTo(0, startY + diff * easeInOutQuad(elapsed));
-      if (elapsed < 1) requestAnimationFrame(step);
+    function step() {
+      frame++;
+      const progress = Math.min(frame / totalFrames, 1);
+      window.scrollTo(0, startY + diff * easeInOutQuad(progress));
+      if (progress < 1) requestAnimationFrame(step);
     }
     requestAnimationFrame(step);
   }
