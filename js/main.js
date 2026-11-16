@@ -28,7 +28,7 @@
       if (prefersReducedMotion) {
         window.scrollTo(0, top);
       } else {
-        smoothScrollTo(top, 1400);
+        smoothScrollTo(top, 2800);
       }
     });
   });
